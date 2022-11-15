@@ -18,3 +18,25 @@ class HelloWorld(APIView):
         request_data = request.data
         return Response({"success": True, "predictedWord": "あ"},
             status=status.HTTP_200_OK)
+
+class History(APIView):
+    def get(self, request, format=None):
+        res = [
+            {
+                "id": 1,
+                "img": "base64encodedimg",
+                "word": "ゴリラ"
+            },
+            {
+                "id": 2,
+                "img": "base64encodedimg2",
+                "word": "ラッパ"
+            },
+            {
+                "id": 3,
+                "img": "base64encodedimg3",
+                "word": "パイナップル"
+            },
+        ]
+
+        return Response(res, status=status.HTTP_200_OK)
