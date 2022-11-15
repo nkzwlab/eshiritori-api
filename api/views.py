@@ -17,4 +17,4 @@ class HelloWorld(APIView):
     def post(self, request, format=None):
         request_data = request.data
         return Response({"success": True, "predictedWord": "あ"},
-            status=status.HTTP_201_CREATED)
+            status=status.HTTP_200_OK)
