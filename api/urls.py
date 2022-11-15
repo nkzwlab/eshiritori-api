@@ -6,5 +6,6 @@ router = routers.DefaultRouter()
 router.register('testdata',views.TestDataViewSet)
 
 urlpatterns = [
-    path('', include(router.urls))
+    path('', include(router.urls)),
+    path('img-with-start-char', views.HelloWorld.as_view(), name='test-get')
 ]
