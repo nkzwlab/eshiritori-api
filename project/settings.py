@@ -85,9 +85,10 @@ DATABASES = {
 }
 
 # CORS_ALLOW_ALL_ORIGINS = True
-CORS_ORIGIN_WHITELIST = [
-    'http://localhost:65323',
-]
+CORS_ORIGIN_ALLOW_ALL = True
+# CORS_ORIGIN_WHITELIST = [
+#     'http://localhost:65323',
+# ]
 ALLOWED_HOSTS = ['*']
 
 # Password validation
