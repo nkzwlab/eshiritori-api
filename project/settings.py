@@ -84,10 +84,8 @@ DATABASES = {
     }
 }
 
-CORS_ORIGIN_WHITELIST = [
-    '*'
-]
-
+CORS_ALLOW_ALL_ORIGINS = True
+ALLOWED_HOSTS = ['*']
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
