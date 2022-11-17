@@ -20,3 +20,6 @@ quickdraw
 transformers
 wandb
 gensim
+
+# utils
+python-dotenv
