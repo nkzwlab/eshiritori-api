@@ -1,4 +1,4 @@
-cmd ?=
+filename ?=
 
 init:
 	docker-compose -f docker-compose.yml build
@@ -19,3 +19,6 @@ install:
 
 create-super-user:
 	docker-compose -f docker-compose.yml exec eshiritori-api python3 manage.py createsuperuser
+
+run:
+	docker-compose -f docker-compose.yml exec eshiritori-api python3 ${filename}
