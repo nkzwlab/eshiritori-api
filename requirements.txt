@@ -1,4 +1,22 @@
+# backend
 Django
 djangorestframework
 django-cors-headers
 replicate
+
+# ml
+google-cloud-translate==2.0.1
+pandas
+spacy
+scikit-learn
+numpy
+pillow
+matplotlib
+nltk
+tqdm
+torchinfo
+torchtext==0.13.0
+quickdraw
+transformers
+wandb
+gensim
