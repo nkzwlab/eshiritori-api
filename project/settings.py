@@ -2,9 +2,19 @@ from pathlib import Path
 from dotenv import load_dotenv
 load_dotenv()
 import os
+import gensim
+import torchvision.models as models
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+print("loading word2vec model...")
+word2vec_model = gensim.models.KeyedVectors.load_word2vec_format('./weights/word2vec/model.vec',binary=False)
+print("done.")
+
+print("loading word2vec model...")
+resnet = models.resnet50(pretrained=False)
+print("done.")
 
 
 # Quick-start development settings - unsuitable for production

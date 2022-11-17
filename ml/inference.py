@@ -7,8 +7,6 @@ from decode_base64 import decode_base64
 from words import get_label_name, get_most_similar_word
 # import torchvision.models as models
 
-
-
 def infer(model,image,top_n=5):
     model.eval()
     with torch.no_grad():

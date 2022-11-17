@@ -1,3 +1,5 @@
 .env
 __pycache__/
+weights/
 *.py[cod]
+db.sqlite3

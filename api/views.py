@@ -4,6 +4,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.views import APIView
 from .models import Histories
+from .generate_img import generate_img
 
 class ImgWithStartChar(APIView):
     def post(self, request, format=None):
