@@ -4,7 +4,7 @@ from rest_framework.views import APIView
 from api.models import Histories
 from api.generator import generate_img
 from ml.inference import predict_with_first_letter
-from project.settings import resnet, word2vec_model
+from project.settings import net, word2vec_model
 from api.generator import generate_img, generate_next_word
 
 class ImgWithStartChar(APIView):
@@ -15,7 +15,7 @@ class ImgWithStartChar(APIView):
         start_char = request_data['startChar']
 
         # 絵の検出結果の呼び出し
-        predict_word = predict_with_first_letter(base64_encoded_img, start_char, resnet_model=resnet, word2vec_model=word2vec_model)
+        predict_word = predict_with_first_letter(base64_encoded_img, start_char, resnet_model=net, word2vec_model=word2vec_model)
         
         if predict_word[0] != start_char or predict_word[-1] == 'ん':
             return  Response({"success": False, "predictedWord": ""}, status=status.HTTP_200_OK)

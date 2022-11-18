@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 load_dotenv()
 import os
 import gensim
-import torchvision.models as models
+from ml.model import Net
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -14,7 +14,7 @@ word2vec_model = gensim.models.KeyedVectors.load_word2vec_format('./weights/word
 print("done.")
 
 print("loading word2vec model...")
-resnet = models.resnet50(pretrained=False)
+net = Net()
 print("done.")
 
 
