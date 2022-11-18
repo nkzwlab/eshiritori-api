@@ -22,7 +22,7 @@ make init
 
 ### 3.データセットのダウンロード
 ```
-make run filename=src/dataset.py
+make run filename=ml/dataset.py
 ```
 で、データセットをダウンロードする。（少し時間がかかるはず）
 
@@ -30,10 +30,14 @@ make run filename=src/dataset.py
 ## 動かし方
 ファイルを動かしたい場合は、
 ```
-make run filename=src/ファイル名.py
+make run filename=ファイル名.py
 ```
 で動かす
 
+サーバーをたてる時
+```
+make server
+```
 
 ## データセット
 
@@ -45,14 +49,14 @@ make run filename=src/ファイル名.py
 
 ### データセットのダウンロード
 ```
-python3 src/dataset.py
+python3 ml/dataset.py
 ```
 
 ### 学習
 - 細かいハイパラ等は全てファイルに直書きしてます。
 - wandbと連携しているので、wandbを使いたくない場合はwandbに関わる行を全てコメントアウトしてください
 ```
-python3 src/main.py
+python3 ml/main.py
 ```
 
 ## 推論
@@ -67,6 +71,6 @@ python3 src/main.py
 
 ### 推論
 ```
-python3 src/inference.py
+python3 ml/inference.py
 ```
 
